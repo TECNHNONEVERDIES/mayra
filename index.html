@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY VALENTINES DAY MAYRAAAAA!!!</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #4f4f4f;
+        }
+
+        header {
+            padding: 20px;
+            background: #ff6f91;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .heart {
+            font-size: 5rem;
+            color: red;
+            margin: 10px 0;
+            animation: heartbeat 1.5s infinite;
+            text-align : center ;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px auto;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            margin: 50px 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        .accordion button {
+            width: 100%;
+            background: #ff6f91;
+            color: white;
+            padding: 15px;
+            border: none;
+            text-align: left;
+            font-size: 1.2rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .accordion button:hover {
+            background: #ff3b6f;
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+            padding: 0 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+
+        .panel.open {
+            max-height: 200px;
+            padding: 15px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #ff6f91;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Valentine's Day, Mayra! 💖</h1>
+    </header>
+
+    <div class="heart">❤️</div>
+
+    <section class="message">
+        <h2>Dear Mayra,</h2>
+        <p style = "font-family : comic sans ms ;">Hey there, first of all, I'm sorry I wasnt able to get uu a physical gift, it was way too risky. So I tried my best on this website, its nothing much, I've been working on it for a while now, I hope uu like it</p>
+    </section>
+
+    <section class="gallery">
+        <img src="https://via.placeholder.com/300x200?text=Memory+1" alt="Memory 1">
+        <img src="https://via.placeholder.com/300x200?text=Memory+2" alt="Memory 2">
+        <img src="https://via.placeholder.com/300x200?text=Memory+3" alt="Memory 3">
+        <img src="https://via.placeholder.com/300x200?text=Memory+4" alt="Memory 4">
+    </section>
+
+
+    <footer>
+        <p style = "text-align: center;">Made with ❤️ by... Well, I think uu know</p>
+        <section class="accordion" style = "text-align: center; color : black ;">
+            <button onclick="togglePanel('panel1')">Click for a little surprise</button>
+            <div id="panel1" class="panel">
+                <p>Im done watching Doom At Your Service, anything else uu want me to watch next?❤️</p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        function togglePanel(id) {
+            var panel = document.getElementById(id);
+            if (panel.classList.contains("open")) {
+                panel.classList.remove("open");
+            } else {
+                panel.classList.add("open");
+            }
+        }
+    </script>
+</body>
+</html>
